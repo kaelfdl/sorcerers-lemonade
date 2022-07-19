@@ -168,7 +168,6 @@ end
 function Level:checkGameover(callback)
     if self.player.coins - self.objects['fruit-stand'].inventory.lemon.cost <= 0 and
         self.objects['lemonade-stand'].inventory.lemon <= 0 then
-        print('Gameover')
         gStateStack:clear()
         gStateStack:push(GameoverState())
     else
@@ -177,9 +176,13 @@ function Level:checkGameover(callback)
 end
 
 function Level:resetProgress()
-    for k, item in pairs(self.dailyProgress) do
-        item = 0
-    end
+    self.dailyProgress = {
+        lemonadeSold = 0,
+        revenue = 0,
+        stockUsed = 0,
+        stockLost = 0,
+        totalEarnings = 0,
+    }
 end
 
 function Level:computeDailySummary()

@@ -12,7 +12,7 @@ WEATHER_DEFS = {
         requiredRecipe = {
             lemon = 2,
             ice = 2,
-            price = 3
+            price = 5
         }
     },
     {
@@ -30,7 +30,7 @@ WEATHER_DEFS = {
         requiredRecipe = {
             lemon = 1,
             ice = 1,
-            price = 1
+            price = 3
         }
     }
 }

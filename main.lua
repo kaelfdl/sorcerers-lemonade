@@ -9,7 +9,7 @@ require 'src/Dependencies'
 
 function love.load()
     math.randomseed(os.time())
-    love.window.setTitle("Witcher's Lemonade")
+    love.window.setTitle("Sorcerer's Lemonade")
 
     love.graphics.setDefaultFilter('nearest', 'nearest')
 

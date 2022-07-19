@@ -198,7 +198,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@Gab_Flordelis](https://twitter.com/Gab_Flordelis) - gabryel.flordelis@google.com
+Your Name - [@Gab_Flordelis](https://twitter.com/Gab_Flordelis) - gabryel.flordelis@gmail.com
 
 Project Link: [https://github.com/kaelfdl/sorcerers-lemonade](https://github.com/kaelfdl/sorcerers-lemonade)
 

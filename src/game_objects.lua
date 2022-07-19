@@ -123,7 +123,7 @@ GAME_OBJECT_DEFS = {
         inventory = {
             ['ice'] = {
                 quantity = 10,
-                cost = 0.5
+                cost = 1
             },
         },
         defaultState = 'default',

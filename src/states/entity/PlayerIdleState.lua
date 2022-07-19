@@ -1,0 +1,24 @@
+--[[
+    Sorcerer's Lemonade
+
+    Author: Gabryel Flor de Lis
+    gabryel.flordelis@gmail.com
+]]
+
+PlayerIdleState = EntityIdleState:extend()
+
+function PlayerIdleState:update(dt)
+    if love.keyboard.isDown('left') then
+        self.entity.direction = 'left'
+        self.entity:changeState('walk')
+    elseif love.keyboard.isDown('right') then
+        self.entity.direction = 'right'
+        self.entity:changeState('walk')
+    elseif love.keyboard.isDown('up') then
+        self.entity.direction = 'up'
+        self.entity:changeState('walk')
+    elseif love.keyboard.isDown('down') then
+        self.entity.direction = 'down'
+        self.entity:changeState('walk')
+    end
+end

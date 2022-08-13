@@ -30,7 +30,7 @@ function PlayState:enter(params)
             'For sunny weather, you need 2 lemons and 2 ice. ' ..
             'For rainy weather, you need 1 lemon. ' ..
             'For cloudy weather, you need 1 lemon and 1 ice. ' ..
-            'To change the speed of the game, use the A and D keys' ..
+            'To change the speed of the game, use the A and D keys. ' ..
             'To exit the game, press Escape. ' ..
             "That's it for now. Good luck!", function()
             gStateStack:push(RecipeMenuState(self.level))

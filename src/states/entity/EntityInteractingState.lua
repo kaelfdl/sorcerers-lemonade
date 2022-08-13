@@ -41,7 +41,7 @@ function EntityInteractingState:enter(params)
         if self.object.recipe.lemon < requiredRecipe.lemon then
             -- Pause the time and a push a dialogue state
             self.level.gameTimer:remove()
-            gStateStack:push(DialogueState('Your lemonade taste bland. It is not worth it.', function()
+            gStateStack:push(DialogueState('Your lemonade taste bland. I will not buy it.', function()
                 self.level.gameTimer = Timer.every(1 / self.level.gameSpeed, function()
                     self.level.timer = self.level.timer - 1
                 end)
@@ -52,7 +52,7 @@ function EntityInteractingState:enter(params)
         if self.object.recipe.lemon > requiredRecipe.lemon then
             -- Pause the time and a push a dialogue state
             self.level.gameTimer:remove()
-            gStateStack:push(DialogueState('Your lemonade taste too strong. It is not worth it.', function()
+            gStateStack:push(DialogueState('Your lemonade taste too strong. I will not buy it.', function()
                 self.level.gameTimer = Timer.every(1 / self.level.gameSpeed, function()
                     self.level.timer = self.level.timer - 1
                 end)
@@ -92,17 +92,28 @@ function EntityInteractingState:enter(params)
             return
         end
 
-        self.object.inventory.lemon = math.max(0, self.object.inventory.lemon - self.object.recipe.lemon)
-        self.object.inventory.ice = math.max(0, self.object.inventory.ice - self.object.recipe.ice)
+        if self.object.inventory.lemon >= requiredRecipe.lemon and self.object.inventory.ice >= requiredRecipe.ice then
 
-        self.object.inventory.juice = self.object.inventory.juice - 1
+            self.object.inventory.lemon = math.max(0, self.object.inventory.lemon - self.object.recipe.lemon)
+            self.object.inventory.ice = math.max(0, self.object.inventory.ice - self.object.recipe.ice)
 
-        self.level.player.coins = self.level.player.coins +
-            self.level.objects['lemonade-stand'].price
-        self.level.dailyProgress.lemonadeSold = self.level.dailyProgress.lemonadeSold + 1
+            self.object.inventory.juice = self.object.inventory.juice - 1
 
-        -- Tween a disappearing coin upwards
-        self.level:tweenCoin(self.object)
+            self.level.player.coins = self.level.player.coins +
+                self.level.objects['lemonade-stand'].price
+            self.level.dailyProgress.lemonadeSold = self.level.dailyProgress.lemonadeSold + 1
+
+            -- Tween a disappearing coin upwards
+            self.level:tweenCoin(self.object)
+        else
+            self.level.gameTimer:remove()
+            gStateStack:push(DialogueState('You do not have the required amount of ingredients to make a lemonade. Visit the fruit or ice merchant to restock!'
+                , function()
+                self.level.gameTimer = Timer.every(1 / self.level.gameSpeed, function()
+                    self.level.timer = self.level.timer - 1
+                end)
+            end))
+        end
     end
 
 

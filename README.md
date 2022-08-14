@@ -137,7 +137,7 @@ Be sure to have LÖVE2D installed on your machine, which you can do through the 
    ```sh
    git clone https://github.com/kaelfdl/sorcerers-lemonade.git
    ```
-2. Then, in a terminal window (located in /Applications/Utilities on Mac or by typing cmd in the Windows task bar), move to the directory where you extracted zelda (recall that the cd command can change your current directory), and run
+2. Then, in a terminal window (located in /Applications/Utilities on Mac or by typing cmd in the Windows task bar), move to the directory where you extracted the file, and run
    ```sh
    cd sorcerers-lemonade
    ```

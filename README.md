@@ -119,6 +119,10 @@ The game ends when the player does not have lemons in their inventory and can no
 <!-- GETTING STARTED -->
 ## Getting Started
 
+Check out the game on [itch][itch-url]!
+
+or 
+
 Download the distro code for the game 
 
 ### Prerequisites
@@ -231,3 +235,4 @@ Project Link: [https://github.com/kaelfdl/sorcerers-lemonade](https://github.com
 [linkedin-url]: https://linkedin.com/in/gabryelilumin
 [product-screenshot]: graphics/sorcerers-lemonade.png
 [Love2D-url]: https://love2d.org/
+[itch-url]: https://kaelfdl.itch.io/sorcerers-lemonade

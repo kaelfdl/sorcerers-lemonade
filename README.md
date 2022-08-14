@@ -41,7 +41,7 @@
     <a href="https://github.com/kaelfdl/sorcerers-lemonade"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/kaelfdl/sorcerers-lemonade">View Demo</a>
+    <a href="https://kaelfdl.itch.io/sorcerers-lemonade">View Demo</a>
     ·
     <a href="https://github.com/kaelfdl/sorcerers-lemonade/issues">Report Bug</a>
     ·
@@ -90,13 +90,13 @@ The player takes the role of a lemonade merchant that sells lemonades from a lem
 
 The game progression is set by a simulated day lasting 3 minutes with each minute corresponding to "7:00 am", "12:00 nn", and "3:00 pm". Each day corresponds to a randomly picked set of weather that can be a mixture of 3 *(sunny, rainy, and cloudy)*.
 
-The player has access to the lemonade stand that includes an inventory of lemons and ice blocks that are consumed for each lemonade sold through a *recipe* setup by the player at the beginning of each day.
+The player has access to the lemonade stand that includes an inventory of lemons and ice blocks that are consumed for each lemonade sold through a *recipe* set up by the player at the beginning of each day.
 
 The player can interact with other merchants such as the *fruit merchant* and the *ice merchant*. These merchants supply the needed ingredients to make the lemonade.
 
 The player gains coins for every lemonade sold. This coin can be used to buy lemons or ice from merchants. 
 
-Ice in the player's inventory melt at the end of each day while lemons spoil every two days. The melting of the ice and spoiling of the lemons deplete the player's inventory of the needed ingredients thereby adding a challenge.
+Ice in the player's inventory melts at the end of each day while lemons spoil every two days. The melting of the ice and spoiling of the lemons deplete the player's inventory of the needed ingredients thereby adding a challenge.
 
 Gaining and losing coins is part of the daily challenge that the player faces. The player can progress through the game indefinitely as long as the player does not go bankrupt.
 
